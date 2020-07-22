@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Css variable</title>
+</head>
+
+<body>
+	<h2>CSS variable in action<span class="hl">JS</span> </h2>
+	<div class="control">
+		<label>Spacing:</label>
+		<input type="range" name="spacing" min="0" max="100" data-sizing='px'>
+		<label>border-radius:</label>
+		<input type="range" name="border-radius" min="0" max="100" data-sizing='px'>
+		<label>Blur:</label>
+		<input type="range" name="blur" min="0" max='100' data-sizing='px'>
+		<label>Color:</label>
+		<input type="color" name="color" value="#00c3ff">
+		<br>
+		<br>
+	</div>
+	<!-- <img class='b' src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=cover&w=500&q=60"> -->
+	<img class='b'
+		src="https://images.unsplash.com/photo-1486578077620-8a022ddd481f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60">
+
+	<script src="brain.js"></script>
+</body>
+
+<style type="text/css">
+	:root {
+		--spacing: 10px;
+		--color: #00c3ff;
+		/* --color:; */
+		--blur: 10px;
+		--br: 0px
+	}
+
+	.b {
+		padding: var(--spacing);
+		filter: blur(var(--blur));
+		background: var(--color);
+		border-radius: var(--border-radius);
+	}
+
+	.hl {
+		color: var(--color);
+	}
+
+	body {
+		text-align: center;
+		background: #193549;
+		color: white;
+		font-family: 'helvetica neue', sans-serif;
+		font-weight: 100;
+		font-size: 50px;
+	}
+</style>
+
+</html>
